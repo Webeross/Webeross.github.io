@@ -2,7 +2,7 @@
 
 Site pessoal de Eduardo Weber, publicado em **https://webeross.github.io/** (GitHub Pages).
 
-HTML, CSS e JavaScript puros, sem build: editar `index.html` e dar `git push` já atualiza o site em 1 a 2 minutos.
+HTML, CSS e JavaScript puros.
 
 | Arquivo | O que é |
 |---|---|
