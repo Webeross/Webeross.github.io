@@ -115,13 +115,15 @@
       <div class="zine-body">
         <div class="col">
           <h3>o que é</h3>
-          <p>Desde fevereiro de 2024 sou engenheiro de dados e desenvolvedor back-end na Selbetti. Cuido dos spiders que coletam
-            os dados e do caminho que eles fazem até virar relatório.</p>
-          <h3>o que eu fiz lá</h3>
+          <p>Desde fevereiro de 2024 sou engenheiro de dados e desenvolvedor back-end na Selbetti. Cuido do pipeline inteiro:
+            de achar onde o dado mora até entregar ele pronto pra quem vai usar.</p>
+          <h3>o que eu faço lá</h3>
           <ul class="bullets">
-            <li>refatorei a arquitetura dos 1.030 spiders e dos pipelines de extração</li>
+            <li><b>engenharia reversa de API</b>: destrincho o que o site carrega por baixo pra achar a fonte de verdade, em vez de raspar a tela</li>
+            <li><b>extração</b>: mantenho 1.030 spiders, e refatorei a arquitetura de todos eles</li>
+            <li><b>entrega</b>: o dado sai por rotina agendada em cron, por API ou em bucket na AWS e no GCP</li>
+            <li><b>infra</b>: subo e administro as máquinas virtuais e faço o deploy em produção</li>
             <li>padronizei o User-Agent nos spiders antigos, e os bloqueios anti-robô diminuíram</li>
-            <li>relatório que era montado à mão agora roda agendado</li>
             <li>os serviços conversam por fila (Pub/Sub), e as consultas pesadas ficam no PostgreSQL</li>
           </ul>
         </div>
@@ -134,7 +136,7 @@
             <p>Outra: falha em fluxo de dados só aparecia quando alguém ia olhar o log. Agora o próprio fluxo manda o log e o
               alerta pro <b>canal do Teams</b>, por webhook, na hora em que quebra.</p>
           </div>
-          <ul class="chips"><li>Python</li><li>PostgreSQL</li><li>AWS S3</li><li>EC2</li><li>GCP</li><li>Pub/Sub</li><li>Webhooks</li><li>Linux</li></ul>
+          <ul class="chips"><li>Python</li><li>PostgreSQL</li><li>APIs</li><li>Cron</li><li>AWS S3</li><li>EC2</li><li>GCP</li><li>Pub/Sub</li><li>Webhooks</li><li>Linux</li></ul>
           <p class="repo"><span class="lockdot"></span>código da empresa · fica na empresa</p>
         </div>
       </div>
