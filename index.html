@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eduardo Weber · Dados, automação e IA</title>
+  <meta name="description" content="Projetos de Eduardo Weber: triagem de currículos com IA explicável, web scraping, segundo cérebro com Claude e finanças pessoais." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#5046e5" />
+  <meta property="og:title" content="Eduardo Weber · Dados, automação e IA" />
+  <meta property="og:description" content="Sistemas de dados de ponta a ponta: coleta, pontuação explicável, APIs, painéis e automação com IA." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://webeross.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EEW%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#topo" aria-label="Início">
+        <span class="logo" aria-hidden="true">EW</span>
+        <span>Eduardo Weber</span>
+      </a>
+      <nav aria-label="Seções">
+        <a href="#projetos">Projetos</a>
+        <a href="#como-trabalho">Como trabalho</a>
+        <a href="#stack">Stack</a>
+        <a href="#contato">Contato</a>
+        <button class="theme" type="button" id="theme" aria-label="Alternar tema claro/escuro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" /></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="topo">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Engenharia de dados · Automação · IA aplicada</p>
+          <h1>Transformo dados espalhados em <span class="grad">decisões que se explicam</span>.</h1>
+          <p class="lead">
+            Construo sistemas de ponta a ponta: da coleta na web à pontuação explicável, passando por APIs, filas,
+            painéis e agentes com IA. Gosto de software que roda de verdade, é testado e respeita os dados das pessoas.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+            <a class="btn btn-ghost" href="https://github.com/Webeross" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <ul class="stats" aria-label="Números">
+          <li><strong>4</strong><span>projetos em uso real</span></li>
+          <li><strong>560+</strong><span>testes automatizados no RH Startup</span></li>
+          <li><strong>0 → 27</strong><span>aprovados na mesma vaga após a pontuação flexível</span></li>
+          <li><strong>27 UFs</strong><span>busca por estado, região e cidade</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="wrap">
+        <h2>Projetos</h2>
+        <p class="section-lead">Quatro sistemas que eu desenhei, construí e uso. Cada um resolve um problema concreto.</p>
+
+        <!-- RH Startup -->
+        <article class="project featured">
+          <div class="project-head">
+            <span class="badge">Destaque</span>
+            <h3>RH Startup <span class="soft">· triagem de currículos com nota explicada</span></h3>
+          </div>
+          <div class="project-grid">
+            <div>
+              <p class="problem"><strong>Problema:</strong> recrutadores leem centenas de currículos por vaga e filtros por palavra-chave
+                exata descartam bons candidatos (“vendedora” não casa com “vendedor”, “Pipedrive” não casa com “CRM”).</p>
+              <p><strong>O que construí:</strong> uma plataforma que busca candidatos em um grande portal de empregos, lê cada
+                currículo, dá uma <em>nota de 0 a 100 com a explicação</em> (“tem CRM via Pipedrive; falta Visitas”) e entrega a lista do
+                melhor para o pior num painel web, em planilha ou por webhook para um CRM.</p>
+              <ul class="highlights">
+                <li><b>Pontuação flexível</b>: radical do português, frases fora de ordem, tolerância a erro de digitação e sinônimos por área (RH, TI, vendas, logística…).</li>
+                <li><b>Nota composta</b> inspirada em ATS: critérios (70%), cargo da vaga (20%) e profundidade (10%), sem mudar quem é aprovado.</li>
+                <li><b>Diagnóstico</b> de cada triagem: quantos currículos tinham cada critério e dicas automáticas do que afrouxar.</li>
+                <li><b>Confirmação em duas etapas</b>: a busca conta os candidatos e a pessoa escolhe quantos ler; a espera não ocupa a fila.</li>
+                <li><b>LGPD por padrão</b>: texto do currículo nunca é gravado, critérios discriminatórios são recusados, dados anonimizados em 30 dias.</li>
+                <li><b>Segurança</b>: webhooks assinados (HMAC), proteção contra SSRF, chave da API que nunca chega ao navegador.</li>
+              </ul>
+            </div>
+            <aside class="project-side">
+              <div class="metric"><strong>0 → 27</strong><span>aprovados em 1.004 currículos, mesmos critérios, depois do modo flexível</span></div>
+              <div class="metric"><strong>568</strong><span>testes no backend + teste de interface com navegador real</span></div>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>Python</li><li>FastAPI</li><li>Celery</li><li>Redis</li><li>SQLAlchemy</li><li>Playwright</li>
+                <li>React</li><li>TypeScript</li><li>Docker</li><li>Caddy</li><li>Cloudflare Tunnel</li>
+              </ul>
+              <p class="repo"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Repositório privado · demonstração sob pedido</p>
+            </aside>
+          </div>
+        </article>
+
+        <div class="cards">
+          <!-- Web scraping -->
+          <article class="project">
+            <h3>Coleta de dados na web</h3>
+            <p class="soft sub">Web scraping robusto e educado com a fonte</p>
+            <p class="problem"><strong>Problema:</strong> dados úteis vivem atrás de login, paginação e proteções contra robôs, e coletores frágeis quebram a cada mudança do site.</p>
+            <ul class="highlights">
+              <li>Navegador automatizado (Playwright) <b>só para o login</b>; o resto em HTTP direto, mais rápido e estável.</li>
+              <li>Leitura dos dados estruturados da página (JSON do Next.js) em vez de raspar HTML visual.</li>
+              <li>Repetição com espera crescente e pausas aleatórias em 403/429; falhas viram códigos claros (“fonte bloqueou”, “sessão expirou”).</li>
+              <li>Catálogo de 27 estados, regiões e cidades obtido da própria API interna da fonte, para buscas por localidade.</li>
+              <li>Teste que garante que a sequência de requisições não muda sem querer (paridade de rede).</li>
+            </ul>
+            <ul class="tags"><li>Playwright</li><li>requests</li><li>BeautifulSoup</li><li>JSON</li></ul>
+            <p class="repo"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Parte do RH Startup · repositório privado</p>
+          </article>
+
+          <!-- Second Brain -->
+          <article class="project">
+            <h3>Second Brain</h3>
+            <p class="soft sub">Assistente pessoal que cruza saúde, treino, tarefas e finanças</p>
+            <p class="problem"><strong>Problema:</strong> meus dados estão espalhados (Garmin, Strava, Notion, finanças) e nenhum app responde “como está minha recuperação considerando o pedal de ontem e as tarefas da semana?”.</p>
+            <ul class="highlights">
+              <li>Ingestores de Garmin, Strava, Notion e finanças num banco local.</li>
+              <li>Claude como “cérebro”, consultando os dados reais por <b>ferramentas MCP</b>: nada de número inventado.</li>
+              <li>Briefing diário e revisão semanal gerados e salvos em Markdown.</li>
+              <li>Chat com memória e anotações direto no Notion.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>Claude</li><li>MCP</li><li>SQLite</li><li>Garmin</li><li>Strava</li><li>Notion</li></ul>
+            <p class="repo"><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Repositório privado</p>
+          </article>
+
+          <!-- My Finances -->
+          <article class="project">
+            <h3>My Finances</h3>
+            <p class="soft sub">Finanças pessoais com importação de extrato por IA</p>
+            <p class="problem"><strong>Problema:</strong> lançar gasto a gasto é tedioso; extratos em PDF têm tudo, mas em formato ruim de usar.</p>
+            <ul class="highlights">
+              <li>Importa o <b>extrato em PDF</b>: a IA extrai as transações num esquema validado (Pydantic) e já sugere a categoria.</li>
+              <li>Revisão antes de gravar: nada entra no banco sem confirmação.</li>
+              <li>Contas, categorias, contas a pagar, contas fixas e estatísticas de despesa.</li>
+              <li>Chat para perguntar sobre os próprios gastos; instalável no celular (PWA) e acessível de fora por túnel seguro.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>Pydantic</li><li>Claude</li><li>Cloudflare Tunnel</li></ul>
+            <p class="repo"><a href="https://github.com/Webeross/Financas" target="_blank" rel="noopener">Ver o código no GitHub →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-trabalho" class="section alt">
+      <div class="wrap">
+        <h2>Como eu trabalho</h2>
+        <div class="principles">
+          <div><h3>Explicável antes de esperto</h3><p>Toda nota vem com o porquê. Se o sistema reprova alguém, dá para ver qual critério faltou e ajustar.</p></div>
+          <div><h3>Medir, não achar</h3><p>Diagnóstico de cada execução, testes com dados reais e comparação antes/depois de cada mudança na lógica.</p></div>
+          <div><h3>Privacidade por padrão</h3><p>LGPD no desenho: guardar o mínimo, anonimizar com prazo, bloquear critérios discriminatórios e nunca registrar dado pessoal em log.</p></div>
+          <div><h3>Feito para rodar</h3><p>Docker, fila, reentregas tratadas, atualização sem derrubar o que está em andamento e teste de interface com navegador real.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="wrap">
+        <h2>Stack</h2>
+        <div class="stack">
+          <div><h3>Dados e back-end</h3><ul class="tags"><li>Python</li><li>FastAPI</li><li>Flask</li><li>SQLAlchemy</li><li>SQLite</li><li>PostgreSQL</li><li>Celery</li><li>Redis</li></ul></div>
+          <div><h3>Coleta</h3><ul class="tags"><li>Playwright</li><li>requests</li><li>BeautifulSoup</li><li>APIs internas</li></ul></div>
+          <div><h3>IA</h3><ul class="tags"><li>Claude</li><li>Claude Code</li><li>MCP</li><li>Pydantic (saída estruturada)</li></ul></div>
+          <div><h3>Front-end</h3><ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>HTML/CSS</li></ul></div>
+          <div><h3>Infra e qualidade</h3><ul class="tags"><li>Docker</li><li>Caddy</li><li>Cloudflare Tunnel</li><li>unittest</li><li>Vitest</li><li>Playwright E2E</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section alt">
+      <div class="wrap contact">
+        <div>
+          <h2>Vamos conversar?</h2>
+          <p class="section-lead">Quer ver uma demonstração do RH Startup ou trocar ideia sobre dados e automação?</p>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Webeross" target="_blank" rel="noopener">github.com/Webeross</a>
+          <!-- Acrescente se quiser:
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/SEU-PERFIL" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="mailto:SEU-EMAIL">E-mail</a>
+          -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="ano">2026</span> Eduardo Weber · feito à mão, sem framework, hospedado no GitHub Pages</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
