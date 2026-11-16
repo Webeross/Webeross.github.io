@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <a class="skip" href="#conteudo">pular para o conteúdo</a>
@@ -21,6 +21,7 @@
   <header class="top">
     <a class="tag-name" href="#topo">WEBEROS<span>
     <nav aria-label="Seções">
+      <a href="#selbetti">trabalho</a>
       <a href="#escolha">projetos</a>
       <a href="#jornal">jornal</a>
       <a href="#sobre">sobre</a>
@@ -104,6 +105,41 @@
     </section>
 
     <!-- ============ PROJETOS ============ -->
+    <!-- ============ SELBETTI ============ -->
+    <article class="zine z-blue" id="selbetti">
+      <header class="zine-head">
+        <span class="zine-num">00</span>
+        <h2>O EMPREGO DE DIA</h2>
+        <p class="zine-tagline">Selbetti · mais de mil spiders pra manter de pé</p>
+      </header>
+      <div class="zine-body">
+        <div class="col">
+          <h3>o que é</h3>
+          <p>Desde fevereiro de 2024 sou engenheiro de dados e desenvolvedor back-end na Selbetti. Cuido dos spiders que coletam
+            os dados e do caminho que eles fazem até virar relatório.</p>
+          <h3>o que eu fiz lá</h3>
+          <ul class="bullets">
+            <li>refatorei a arquitetura dos 1.030 spiders e dos pipelines de extração</li>
+            <li>padronizei o User-Agent nos spiders antigos, e os bloqueios anti-robô diminuíram</li>
+            <li>relatório que era montado à mão agora roda agendado</li>
+            <li>os serviços conversam por fila (Pub/Sub), e as consultas pesadas ficam no PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="scar">
+            <h3>o número</h3>
+            <p>Os spiders rodavam um depois do outro. Coloquei pra rodar em paralelo e o volume de dados coletados <b>dobrou</b>,
+              com os mesmos 1.030 spiders.</p>
+            <p class="big-number"><span>1×</span> → <span>2×</span><small>volume coletado, mesmos 1.030 spiders</small></p>
+            <p>Outra: falha em fluxo de dados só aparecia quando alguém ia olhar o log. Agora o próprio fluxo manda o log e o
+              alerta pro <b>canal do Teams</b>, por webhook, na hora em que quebra.</p>
+          </div>
+          <ul class="chips"><li>Python</li><li>PostgreSQL</li><li>AWS S3</li><li>EC2</li><li>GCP</li><li>Pub/Sub</li><li>Webhooks</li><li>Linux</li></ul>
+          <p class="repo"><span class="lockdot"></span>código da empresa · fica na empresa</p>
+        </div>
+      </div>
+    </article>
+
     <article class="zine z-yellow" id="rh">
       <header class="zine-head">
         <span class="zine-num">01</span>

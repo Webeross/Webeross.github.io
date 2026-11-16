@@ -112,9 +112,9 @@ h1 .l3 { display: block; font-size: clamp(1.9rem, 4.2vw, 3.4rem); margin-top: .4
 .scar h3 { color: var(--accent); margin-top: 0; }
 .scar s { color: var(--red); text-decoration-thickness: 3px; }
 .scar b { color: var(--yellow); }
-.big-number { font-family: var(--display); font-size: 3.6rem; line-height: 1; margin: .8rem 0 0 !important; }
+.big-number { font-family: var(--display); font-size: 3.6rem; line-height: 1; margin: .8rem 0 1rem !important; }
 .big-number span:first-child { color: var(--red); }
-.big-number span:last-child { color: var(--green); }
+.big-number span:nth-of-type(2) { color: var(--green); }
 .big-number small { display: block; font-family: var(--mono); font-size: .8rem; color: var(--muted); margin-top: .3rem; }
 .chips { list-style: none; padding: 0; margin: 1.4rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; }
 .chips li { font-family: var(--mono); font-size: .8rem; font-weight: 700; padding: .15rem .55rem; border: 2px solid var(--ink); background: #fff; }
@@ -189,3 +189,10 @@ h1 .l3 { display: block; font-size: clamp(1.9rem, 4.2vw, 3.4rem); margin-top: .4
 }
 .contact .mail { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 3px; }
 .contact .mail:hover { background: var(--ink); color: var(--yellow); }
+
+/* página azul (Selbetti): no azul-cobalto, texto claro para dar contraste */
+.z-blue { --accent: var(--blue); }
+.z-blue .zine-head { background: var(--blue); color: var(--paper); }
+.z-blue .zine-num { opacity: .35; }
+.z-blue .scar h3 { color: #8f9bff; }
+.z-blue .big-number span:first-child { color: var(--muted); }
