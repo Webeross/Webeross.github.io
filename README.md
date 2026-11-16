@@ -12,3 +12,5 @@ HTML, CSS e JavaScript puros, sem build: editar `index.html` e dar `git push` j�
 | `.nojekyll` | Diz ao GitHub Pages para servir os arquivos como estão |
 
 Ver localmente: `python3 -m http.server 8000` nesta pasta e abrir http://localhost:8000.
+
+**Ao mudar `style.css` ou `main.js`, aumente o `?v=N` no `index.html`** (ex.: `style.css?v=3`). O GitHub Pages manda o navegador guardar os arquivos por 10 minutos; sem isso, quem já visitou pode ver HTML novo com CSS velho (página quebrada).
